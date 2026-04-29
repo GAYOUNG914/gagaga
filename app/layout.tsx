@@ -5,11 +5,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000");
 
 // ✏️ 고객 맞춤형: 아래 값을 고객 정보에 맞게 수정하세요
-const groomName = "홍길동";
-const brideName = "김영희";
-const weddingDate = "2027년 10월 18일 (일) 오후 2시";
-const venueName = "임피리얼 팰리스 호텔 그랜드홀";
-const venueAddress = "서울 강남구 언주로 640";
+const groomName = "김희민";
+const brideName = "장수연";
+const weddingDate = "2028년 12월 1일 (일) 오후 4시";
+const venueName = "서울 서초구 엘블레스";
+const venueAddress = "서울 서초구 강남대로 213 LL층";
 
 const title = `${groomName} ♥ ${brideName} 결혼합니다`;
 const description = `${weddingDate} ${venueName}(${venueAddress})에서 저희 두 사람의 결혼식에 초대합니다.`;

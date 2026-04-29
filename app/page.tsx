@@ -5,7 +5,8 @@ import { OpenSection } from '@/components/invitation/OpenSection';
 import { HeroSection } from '@/components/invitation/HeroSection';
 import { GreetingSection } from '@/components/invitation/GreetingSection';
 import { BrideGroomSection } from '@/components/invitation/BrideGroomSection';
-import { GallerySlideSection } from '@/components/invitation/GallerySlideSection';
+import { GallerySection } from '@/components/invitation/GallerySection';
+// import { GallerySlideSection } from '@/components/invitation/GallerySlideSection';
 import { CalendarSection } from '@/components/invitation/CalendarSection';
 import { MapSection } from '@/components/invitation/MapSection';
 import { AccountsSection } from '@/components/invitation/AccountsSection';
@@ -17,28 +18,28 @@ import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 const sampleInvitation: InvitationConfig = {
-  groomName: '홍길동',
-  brideName: '김영희',
-  date: '2027-10-18',
-  time: '14:00',
-  location: '서울 강남구 임피리얼 \n팰리스 호텔 B1층 그랜드홀',
-  locationDetails: '서울 강남구 언주로 640',
-  address: '서울 강남구 논현동 248-7',
-  particleType: 'flower',
+  groomName: '김희민',
+  brideName: '장수연',
+  date: '2028-12-01',
+  time: '16:00',
+  location: '서울 서초구 엘블레스',
+  locationDetails: '서울 서초구 강남대로 213 LL층',
+  address: '서울 서초구 엘블레스',
+  particleType: 'heart',
 
-  groomParents: { father: '홍순신', fatherPhone: '010-1111-2222', mother: '이순신', motherPhone: '010-3333-4444' },
-  brideParents: { father: '김유신', fatherPhone: '010-5555-6666', mother: '이육신', motherPhone: '010-7777-8888' },
+  groomParents: { father: '김학익', fatherPhone: '010-1111-1111', mother: '손희경', motherPhone: '010-2222-2222' },
+  brideParents: { father: '장민철', fatherPhone: '010-3333-4333', mother: '최승은', motherPhone: '010-4444-4444' },
 
-  groomPhone: '010-1234-5678',
-  bridePhone: '010-9876-5432',
+  groomPhone: '010-2424-1414',
+  bridePhone: '010-1313-2424',
 
   accounts: {
-    groom: { bank: '국민은행', accountHolder: '홍길동', accountNumber: '123-456-789012' },
-    groomFather: { bank: '국민은행', accountHolder: '홍순신', accountNumber: '123-456-789012' },
-    groomMother: { bank: '국민은행', accountHolder: '이순신', accountNumber: '123-456-789012' },
-    bride: { bank: '우리은행', accountHolder: '김영희', accountNumber: '987-654-321098' },
-    brideFather: { bank: '우리은행', accountHolder: '김유신', accountNumber: '987-654-321098' },
-    brideMother: { bank: '우리은행', accountHolder: '이육신', accountNumber: '987-654-321098' },
+    groom: { bank: '국민은행', accountHolder: '김희민', accountNumber: '123-456-789012' },
+    groomFather: { bank: '신한은행', accountHolder: '김학익', accountNumber: '123-456-789012' },
+    groomMother: { bank: '기업은행', accountHolder: '손희경', accountNumber: '123-456-789012' },
+    bride: { bank: '카카오뱅크', accountHolder: '장수연', accountNumber: '987-654-321098' },
+    brideFather: { bank: '토스뱅크', accountHolder: '장민철', accountNumber: '987-654-321098' },
+    brideMother: { bank: '대구은행', accountHolder: '최승은', accountNumber: '987-654-321098' },
   },
 
   primaryColor: '#627449',
@@ -48,38 +49,38 @@ const sampleInvitation: InvitationConfig = {
 
   // ✏️ 여기만 바꾸면 테마 전환
   // 'minimal' | 'elegant' | 'modern' | 'romantic'
-  theme: 'minimal',
+  theme: 'romantic',
 
-  heroImage: '/images/dummy_5.webp',
+  heroImage: '/images/dummy_1.webp',
   heroScript: 'always, together',
-  venueImage: '/images/dummy_4.webp',
+  // venueImage: '/images/dummy_2.webp',
 
   greetingMessage:
-    '두 사람의 사랑이 새로운 시작을 맞이합니다.\n소중한 분들과 함께하는\n행복한 날이 되기를 바랍니다.',
+    '계절의 변화를 함께하며 쌓아온 사랑이 \n이제 결실을 맺으려 합니다. \n그 따뜻한 자리에 함께해 주세요.',
 
   galleryImages: [
+    '/images/dummy_5.webp',
+    '/images/dummy_4.webp',
+    '/images/dummy_5.webp',
+    '/images/dummy_6.webp',
     '/images/dummy_1.webp',
     '/images/dummy_2.webp',
     '/images/dummy_3.webp',
     '/images/dummy_4.webp',
     '/images/dummy_5.webp',
     '/images/dummy_6.webp',
-    '/images/dummy_5.webp',
-    '/images/dummy_4.webp',
-    '/images/dummy_3.webp',
-    '/images/dummy_2.webp',
   ],
 
-  latitude: 37.5140,
-  longitude: 127.0359,
+  latitude: 37.483108,
+  longitude: 127.034977,
 
   transportation: {
-    subway: '지하철 2호선 강남역 1번 출구 도보 5분',
-    bus: '강남역 정류장 하차 후 도보 3분 (146, 362, 740번)',
+    subway: '지하철 신분당선 양재역 9번 출구 도보 1분',
+    bus: '양재역 정류장 하차 후 도보 1분 (9100, 9200, 9201번)',
     car: '건물 지하 주차장 이용 가능 (2시간 무료)',
   },
 
-  footerImage: '/images/dummy_6.webp',
+  footerImage: '/images/dummy_3.webp',
 };
 
 export default function InvitationPage() {
@@ -137,7 +138,7 @@ export default function InvitationPage() {
       {!opened && <OpenSection onStart={handleStart} onOpen={handleOpen} />}
       <HeroSection config={config} />
       {/* 1. 왼쪽 — 인사말 옆 */}
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative', zIndex: 1 }}>
         {/* <ParallaxDeco src="/images/flower_1.webp" side="left" top="8%" offset="-28px" width={120} speed={80} zIndex={1} /> */}
         <GreetingSection config={config} />
       </div>
@@ -149,8 +150,8 @@ export default function InvitationPage() {
       {config.galleryImages && config.galleryImages.length > 0 && (
         <div style={{ position: 'relative' }}>
           <ParallaxDeco src="/images/flower_2.webp" side="right" top="-8%" offset="-70px" width={180} speed={90} zIndex={1} rotate="-15deg" />
-          {/* <GallerySection images={config.galleryImages} /> */}
-          <GallerySlideSection images={config.galleryImages} />
+          <GallerySection images={config.galleryImages} />
+          {/* <GallerySlideSection images={config.galleryImages} /> */}
         </div>
       )}
 

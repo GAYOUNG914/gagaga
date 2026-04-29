@@ -287,9 +287,9 @@
   display: block;
   width: 100%;
   padding: 14px;
-  background-color: var(--primary);
-  color: var(--on-primary);
-  border: none;
+  // background-color: var(--primary);
+  color: var(--primary);
+  border: 1px solid var(--primary);
   border-radius: var(--radius);
   font-size: 1rem;
   font-family: var(--font);
@@ -418,7 +418,7 @@
 .inv-hero {
   width: 100%;
   background-color: var(--bg);
-  overflow: hidden;  /* 패럴랙스 시 사진 삐져나옴 방지 */
+  // overflow: hidden;  /* 패럴랙스 시 사진 삐져나옴 방지 */
   opacity: 0;
 }
 
