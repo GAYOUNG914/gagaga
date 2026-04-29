@@ -706,7 +706,7 @@
   padding: 12px;
   background: none;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 50px;
   color: var(--text-muted);
   font-family: var(--font);
   font-size: 0.95rem;
@@ -714,10 +714,10 @@
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
 
-  &:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-  }
+  // &:hover {
+  //   border-color: var(--primary);
+  //   color: var(--primary);
+  // }
 }
 
 

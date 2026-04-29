@@ -50,7 +50,7 @@ export function GallerySection({ images }: GallerySectionProps) {
     <>
       <section className="inv-section inv-section--alt" style={{ position: 'relative' }}>
         <div className="inv-container--wide">
-          <h2 className="inv-title" data-aos="fade-in">Gallery</h2>
+          <h2 className="inv-title eng" data-aos="fade-in">Gallery</h2>
           <div className="inv-gallery__grid" data-aos="fade-in" data-aos-delay="100">
             {visible.map((image, idx) => (
               <div
@@ -68,8 +68,9 @@ export function GallerySection({ images }: GallerySectionProps) {
               onClick={() => setShowAll(true)}
               data-aos="fade-in"
               data-aos-delay="200"
+              style={{fontFamily:'NotoSansKR'}}
             >
-              더보기 +{images.length - INITIAL_COUNT}
+              더보기 + {images.length - INITIAL_COUNT}
             </button>
           )}
         </div>
@@ -90,6 +91,7 @@ export function GallerySection({ images }: GallerySectionProps) {
                 src={selectedImage!}
                 alt="갤러리"
                 className="inv-lightbox__img"
+                style={{maxWidth:'480px', maxHeight:'80vh', objectFit:'contain'}}
               />
             </div>
           </div>

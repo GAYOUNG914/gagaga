@@ -24,7 +24,7 @@ export function FooterSection({ footerImage, groomName, brideName, date, url, sh
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const kakao = (window as any).Kakao;
       const currentUrl = getPageUrl();
-      const imageUrl = shareImageUrl || `${window.location.origin}/og-image.jpg`;
+      const imageUrl = shareImageUrl || `${window.location.origin}/og-image.jpg?t=${Date.now()}`;
 
 
 
