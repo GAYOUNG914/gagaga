@@ -98,8 +98,8 @@ export function FooterSection({ footerImage, groomName, brideName, date, url, sh
     <footer className="inv-footer">
       <div className="inv-footer__actions">
         <button onClick={handleCopyUrl} className="inv-footer__btn inv-footer__btn--ghost url-copy-btn" style={{fontFamily: 'NotoSansKR', fontWeight: '400'}} data-aos="fade-in" data-aos-offset="60">
-          <i>{copiedMsg ?'':<img src="./images/icons/link.svg" alt="" />}</i>
-          {copiedMsg ? <span style={{ fontSize: '0.85rem' }}>{copiedMsg}</span> : ' 청첩장 주소 복사'}
+          {copiedMsg ?'':<i><img src="./images/icons/link.svg" alt="" /></i>}
+          {copiedMsg ? <span>{copiedMsg}</span> : ' 청첩장 주소 복사'}
         </button>
 
         <button onClick={handleKakaoShare} className="inv-footer__btn inv-footer__btn--kakao" style={{fontFamily: 'NotoSansKR', fontWeight: '400', textShadow: '0 1px 2px #00000038', color: '#000000b9'}}  data-aos="fade-in" data-aos-offset="60">
@@ -112,7 +112,7 @@ export function FooterSection({ footerImage, groomName, brideName, date, url, sh
       </div>
 
       <div className="inv-footer__copy">
-        <p>Copyright 2026. gayoung Kim</p>
+        <p>Copyright 2026. trustrowan</p>
         {/* <p>{groomName}님과 {brideName}님의 특별한 날을 축하합니다.</p> */}
       </div>
 

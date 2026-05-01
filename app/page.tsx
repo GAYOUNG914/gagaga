@@ -27,19 +27,19 @@ const sampleInvitation: InvitationConfig = {
   address: '서울 서초구 엘블레스',
   particleType: 'heart',
 
-  groomParents: { father: '김학익', fatherPhone: '010-1111-1111', mother: '손희경', motherPhone: '010-2222-2222' },
-  brideParents: { father: '장민철', fatherPhone: '010-3333-4333', mother: '최승은', motherPhone: '010-4444-4444' },
+  groomParents: { father: '김학익', fatherPhone: '010-000-0000', mother: '손희경', motherPhone: '010-0000-0000' },
+  brideParents: { father: '장민철', fatherPhone: '010-000-0000', mother: '최승은', motherPhone: '010-0000-0000' },
 
-  groomPhone: '010-2424-1414',
-  bridePhone: '010-1313-2424',
+  groomPhone: '010-0000-0000',
+  bridePhone: '010-0000-0000',
 
   accounts: {
-    groom: { bank: '국민은행', accountHolder: '김희민', accountNumber: '123-456-789012' },
-    groomFather: { bank: '신한은행', accountHolder: '김학익', accountNumber: '123-456-789012' },
-    groomMother: { bank: '기업은행', accountHolder: '손희경', accountNumber: '123-456-789012' },
-    bride: { bank: '카카오뱅크', accountHolder: '장수연', accountNumber: '987-654-321098' },
-    brideFather: { bank: '토스뱅크', accountHolder: '장민철', accountNumber: '987-654-321098' },
-    brideMother: { bank: '대구은행', accountHolder: '최승은', accountNumber: '987-654-321098' },
+    groom: { bank: '국민은행', accountHolder: '김희민', accountNumber: '000-000-000000' },
+    groomFather: { bank: '신한은행', accountHolder: '김학익', accountNumber: '000-000-000000' },
+    groomMother: { bank: '기업은행', accountHolder: '손희경', accountNumber: '000-000-000000' },
+    bride: { bank: '카카오뱅크', accountHolder: '장수연', accountNumber: '000-000-000000' },
+    brideFather: { bank: '토스뱅크', accountHolder: '장민철', accountNumber: '000-000-000000' },
+    brideMother: { bank: '대구은행', accountHolder: '최승은', accountNumber: '000-000-000000' },
   },
 
   primaryColor: '#627449',

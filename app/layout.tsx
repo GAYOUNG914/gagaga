@@ -12,7 +12,7 @@ const venueName = "서울 서초구 엘블레스";
 const venueAddress = "서울 서초구 강남대로 213 LL층";
 
 const title = `${groomName} ♥ ${brideName} 결혼합니다`;
-const description = `${weddingDate} ${venueName}(${venueAddress})에서 저희 두 사람의 결혼식에 초대합니다.`;
+const description = `${weddingDate} ${venueName}에서 저희 두 사람의 결혼식에 초대합니다.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
